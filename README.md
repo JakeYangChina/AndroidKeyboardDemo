@@ -18,7 +18,12 @@
 <br>
 #### 使用方法
 ```
-		mCoreKeyboardState = CoreKeyboardState.create()
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mCoreKeyboardState = CoreKeyboardState.create()
                 .setActivity(this)
                 .setKeyboardStateCallback(new KeyboardStateCallback() {
                     @Override
@@ -40,6 +45,7 @@
                         }
                     }
                 }).build();
+    }
 ```
 ```
 	@Override
